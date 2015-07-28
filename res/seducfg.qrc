@@ -1,0 +1,38 @@
+<RCC>
+    <qresource prefix="/png">
+        <file>png/connect.png</file>
+        <file>png/disconnect.png</file>
+        <file>png/save.png</file>
+        <file>png/test.png</file>
+        <file>png/run.png</file>
+        <file>png/exit.png</file>
+        <file>png/help.png</file>
+        <file>png/info.png</file>
+        <file>png/donation.png</file>
+        <file>png/smiley-lo.png</file>
+        <file>png/smiley-hi.png</file>
+        <file>png/qr_bc.png</file>
+        <file>png/qr_bt.png</file>
+        <file>png/qr_pp.png</file>
+        <file>png/banking.png</file>
+        <file>png/bitcoin.png</file>
+        <file>png/paypal.png</file>
+        <file>png/email_48.png</file>
+        <file>png/email_64.png</file>
+        <file>png/donate_48.png</file>
+        <file>png/donate_64.png</file>
+        <file>png/language_48.png</file>
+        <file>png/language_64.png</file>
+        <file>png/forum_48.png</file>
+        <file>png/forum_64.png</file>
+        <file>png/update_win_48.png</file>
+        <file>png/update_win_64.png</file>
+        <file>png/update_lin_48.png</file>
+        <file>png/update_lin_64.png</file>
+        <file>png/update_mac_48.png</file>
+        <file>png/update_mac_64.png</file>
+    </qresource>
+    <qresource prefix="/ico">
+        <file>ico/app.ico</file>
+    </qresource>
+</RCC>

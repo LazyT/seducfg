@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>512</width>
+    <height>517</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>512</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">SEDU Configurator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../seducfg.qrc">
+    <normaloff>:/ico/ico/app.ico</normaloff>:/ico/ico/app.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QGroupBox" name="groupBox_logger">
+      <property name="title">
+       <string>Logger</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QListWidget" name="listWidget">
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="toolTip">
+          <string>communication log</string>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::NoSelection</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_connection">
+      <property name="title">
+       <string>Connection</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QComboBox" name="comboBox_port">
+         <property name="toolTip">
+          <string>port</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox_speed">
+         <property name="toolTip">
+          <string>baudrate</string>
+         </property>
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">250000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">500000</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_configuration">
+      <property name="title">
+       <string>Configuration</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="bottomMargin">
+          <number>5</number>
+         </property>
+         <item>
+          <widget class="QComboBox" name="comboBox_program">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="toolTip">
+            <string>standalone program</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>none</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>fixed color</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>testpic</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>rainbow fader</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>diy fader</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>red wave</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>color wave</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>blob</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>blob pastell</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>glitter white</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>glitter dark</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>fire</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>spark</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_color">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="toolTip">
+            <string>led color order</string>
+           </property>
+           <item>
+            <property name="text">
+             <string notr="true">RGB</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">GRB</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">RBG</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">BGR</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">BRG</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">GBR</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QSpinBox" name="spinBox_brightness">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="toolTip">
+            <string>brightness</string>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>255</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="spinBox_speed">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="toolTip">
+            <string>effect speed</string>
+           </property>
+           <property name="minimum">
+            <number>3</number>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>3</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="spinBox_led">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="toolTip">
+            <string>leds per channel</string>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="pushButton_connect">
+        <property name="toolTip">
+         <string>connect/disconnect SEDU</string>
+        </property>
+        <property name="text">
+         <string>Connect</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../seducfg.qrc">
+          <normaloff>:/png/png/disconnect.png</normaloff>
+          <normalon>:/png/png/connect.png</normalon>:/png/png/disconnect.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_test">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="toolTip">
+         <string>test config</string>
+        </property>
+        <property name="text">
+         <string>Test</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../seducfg.qrc">
+          <normaloff>:/png/png/test.png</normaloff>:/png/png/test.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_save">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="toolTip">
+         <string>save config</string>
+        </property>
+        <property name="text">
+         <string>Save</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../seducfg.qrc">
+          <normaloff>:/png/png/save.png</normaloff>:/png/png/save.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_run">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="toolTip">
+         <string>run stored program</string>
+        </property>
+        <property name="text">
+         <string>Run</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../seducfg.qrc">
+          <normaloff>:/png/png/run.png</normaloff>:/png/png/run.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>512</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="../seducfg.qrc">
+     <normaloff>:/png/png/exit.png</normaloff>:/png/png/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="../seducfg.qrc">
+     <normaloff>:/png/png/help.png</normaloff>:/png/png/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../seducfg.qrc"/>
+ </resources>
+ <connections/>
+</ui>
