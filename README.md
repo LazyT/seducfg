@@ -12,7 +12,7 @@ The current version supports the following features:
 
 ##### Hint for OSX users
 
-If you get timeout errors you should mod your FTDI driver:
+If you get timeout errors you should modify your FTDI driver:
 
 * [download and install latest driver](http://www.ftdichip.com/Drivers/VCP.htm)
 * open "/Library/Extensions/FTDIUSBSerialDriver.kext/Contents/Info.plist" with your preferred editor as root
@@ -28,6 +28,17 @@ If you get timeout errors you should mod your FTDI driver:
 		</dict>
 * disconnect device
 * run "sudo kextunload -b com.FTDI.driver.FTDIUSBSerialDriver" and "sudo kextload -b com.FTDI.driver.FTDIUSBSerialDriver"
+* reconnect device
+
+##### Hint for Linux users
+
+If you get permission denied errors you should create a udev rule:
+
+* disconnect device
+* create file (e.g. "/etc/udev/rules.d/99-sedu.rules") as root add the following line
+
+		KERNEL=="ttyUSB*", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", MODE="0666"
+
 * reconnect device
 
 ## Screenshots
