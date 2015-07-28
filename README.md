@@ -2,13 +2,33 @@
 
 ## Description
 
-With the seducfg tool you can setup your sedu board controller.
+With the seducfg tool you can setup your sedu board controller easily via gui.
 
 The current version supports the following features:
 
-* setup the sedu board controller via gui
+* check function, try out various settings, save configuration
 * multi platform (Windows, Linux, MacOS)
 * multi language (English and German at the moment, translators welcome)
+
+##### Hint for OSX users
+
+If you get timeout errors you should mod your FTDI driver:
+
+* [download and install latest driver](http://www.ftdichip.com/Drivers/VCP.htm)
+* open "/Library/Extensions/FTDIUSBSerialDriver.kext/Contents/Info.plist" with your preferred editor as root
+* locate sedu entry (e.g. idVendor 1027, idProduct 24577) and add the following (or 250000)
+
+		<key>ConfigData</key>
+		<dict>
+			<key>BaudRates</key>
+			<dict>
+				<key>BAUDALL</key>
+				<integer>500000</integer>
+			</dict>
+		</dict>
+* disconnect device
+* run "sudo kextunload -b com.FTDI.driver.FTDIUSBSerialDriver" and "sudo kextload -b com.FTDI.driver.FTDIUSBSerialDriver"
+* reconnect device
 
 ## Screenshots
 
