@@ -1,0 +1,2 @@
+# seducfg
+SEDU Board Configurator
